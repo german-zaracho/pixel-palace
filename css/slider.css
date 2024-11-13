@@ -1,0 +1,225 @@
+.slider {
+    --slider-padding: 1rem;
+    --slider-column-gap: 1rem;
+    --slide-width: 33.4%;
+    --slide-min-width: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+.sliderContainer {
+    width: 1355px;
+    /* max-width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+section.slider {
+    padding: 10px 0;
+    background: #0e0e16;
+    /* height: 100vh; */
+}
+
+.sliderTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+.slideContent {
+    bottom: 20px;
+    width: 100%;
+    padding: 0 30px 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px 20px 0px;
+    height: 70px;
+}
+
+button.sliderButton, button.sliderButtonArrow {
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #0e0e16;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+button.sliderButton:hover, button.sliderButtonArrow:hover {
+    border: 3px solid #2f99d9;
+    background: transparent;
+    color: #2f99d9;
+}
+
+.slideItem .sliderButton {
+    width: 160px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0px 20px 0px;
+}
+
+.slideContent p {
+    color: #fff;
+    /* font-size: 22px;
+    letter-spacing: 1px; */
+    padding: 0px 20px 0px 20px;
+}
+
+
+.slider .btns {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.slider .btns button {
+    height: 48px;
+    width: 150px;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    background: none;
+    border: 3px solid #2f99d9;
+    color: #2f99d9;
+    letter-spacing: 1px;
+}
+
+.slider .btns button:hover {
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    color: #0e0e16;
+}
+
+.slideItem:hover {
+    border: 3px solid #2f99d9;
+}
+
+
+
+.sliderTrack {
+    display: flex;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    padding-inline: var(--slider-padding);
+    scroll-behavior: smooth;
+    list-style-type: none;
+    padding: 0;
+    margin-right: calc(--var(slider-column-gap) * -1);
+    scrollbar-width: none;
+}
+
+.sliderTrack>* {
+    flex: 0 0 var(--slide-width);
+    min-width: var(--slide-min-width);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding-right: var(--slider-column-gap);
+}
+
+.sliderTrack::-webkit-scrollbar {
+    display: none;
+}
+
+.sliderButtons {
+    margin-top: 1rem;
+}
+
+.sliderButtons [disabled] {
+    opacity: 0.5;
+}
+
+.slideItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    border: 3px solid #383c4e;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.wrapperSlideImg {
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slideImg {
+    max-width: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+/* Responsive Media Query */
+
+@media (max-width: 1300px) {
+
+    .sliderContainer {
+        width: 90%;
+    }
+
+    .sliderTrack .slideItem {
+        width: 80%;
+    }
+
+    .slider {
+        --slide-width:35.4%;
+    }
+
+    .slideContent {
+        flex-direction: column;
+        margin-bottom: 90px;
+    }
+
+}
+
+@media (max-width:1000px) {
+
+    .slider {
+        --slide-width:55.4%;
+    }
+
+    .slideContent {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    button.sliderButton, button.sliderButtonArrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .slider .btns button {
+        font-size: 16px;
+    }
+
+    .slider {
+        --slide-width:128%;
+    }
+
+}
+

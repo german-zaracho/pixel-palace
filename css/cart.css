@@ -1,0 +1,241 @@
+.cartContent {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5% 0px 5%;
+    justify-content: space-around;
+    color: white;
+}
+
+.cartStatus .cartTableContainer {
+    color: black;
+}
+
+.cartTableContainer {
+    background-color: rgb(207, 207, 207);
+}
+
+table {
+    margin: 10px;
+}
+
+.cartTableContainer {
+    border-radius: 7px;
+}
+
+/* .cartTableContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.goToCart {
+    justify-self: end;
+} */
+
+.cartTableContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartTableContainer> :last-child {
+    align-self: center;
+}
+
+table tr.productTr {
+    background-color: white;
+}
+
+.navTotal {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 37px 0px 34px;
+    justify-content: space-between;
+}
+
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 20px 0px;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 7px;
+    padding: 10px 10px 10px 10px;
+}
+
+.productContainer div {
+    margin: 0px 20px 0px 0px;
+}
+
+.imgWrapper {
+    width: 150px;
+    margin: 5px;
+}
+
+.imgWrapper img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.productValues {
+    display: flex;
+    flex-direction: row;
+}
+
+.productName .deleteButton,
+.proceedToCheckout,
+.buttonLess,
+.buttonPlus,
+.checkoutContinueButton,
+.backToCartButton,
+.deletePurchase {
+
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.productName .deleteButton {
+
+    width: 150px;
+    height: 48px;
+
+
+}
+
+.proceedToCheckout {
+    width: 150px;
+    height: 60;
+    margin: 10px 0px 0px 0px;
+}
+
+.buttonLess,
+.buttonPlus {
+    height: 48px;
+}
+
+.quantityProductContainer span {
+    margin: 0px 5px 0px 5px;
+}
+
+@media (max-width:1000px) {
+
+    .shoppingProducts .productContainer {
+        flex-direction: column;
+        background-color: black;
+        border-radius: 7px;
+    }
+
+    .shoppingProducts .productContainer div {
+        margin: 10px 0px 10px 0px ;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .cartContent {
+        flex-direction: column;
+    }
+
+    .productBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .productContainer {
+        flex-direction: column;
+    }
+
+    .productContainer div {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .productContainer .quantityProductContainer {
+        margin: 10px 0px 10px 0px;
+    }
+
+}
+
+/* Checkout */
+
+.checkoutSection h2 {
+    font-size: 28px;
+}
+
+.clientDataContainer,
+.deliveryDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0px 50px 0px 50px;
+}
+
+.clientDataContainer form {
+    width: 500px;
+}
+
+.clientDataContainer form div,
+.deliveryDetailsContainer form div {
+    margin: 0px 0px 10px 0px;
+    width: 50%;
+}
+
+.clientDataContainer input,
+.deliveryDetailsContainer input {
+    margin: 0px 0px 0px 20px;
+    border-radius: 7px;
+    height: 24px;
+}
+
+.deliveryDetailsContainer form p {
+    display: flex;
+    flex-direction: column;
+}
+
+.deliveryDetailsContainer form p span:nth-child(2) {
+    margin: 0px 0px 0px 220px;
+    color: #2f99d9;
+}
+
+
+
+.paymentDetailsContainer form {
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0px 0px 0px 50px;
+    text-align: start;
+
+}
+
+.cashInfoContainer {
+    margin: 0px 0px 0px 20px;
+}
+
+.checkoutContinueButton {
+    margin: 10px 230px 0px 0px;
+}
+
+.backToCartButton {
+    margin: 10px 0px 0px 0px;
+}
+
+/* @media (max-width: 1000px) {
+
+} */

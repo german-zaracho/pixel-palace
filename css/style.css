@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+SC:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Major+Mono+Display&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: grey; */
+    background-color: #0e0e16;
+}
+
+html {
+    /*So that there is no horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+/* bestSellerSection */
+
+.bestSellerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.bestSellerContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    margin: 50px 0px 50px 0px;
+}
+
+.bestSellerIntro,
+.bestSellerIntro2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 500px;
+    padding: 30px;
+    margin: 0px 3vw 0px 3vw;
+}
+
+.bestSellerImg img {
+    height: 500px;
+    width: 500px;
+}
+
+@media (max-width: 1000px) {
+
+    .bestSellerImg img {
+        width: 100%;
+        height: 400px;
+
+    }
+
+    .bestSellerIntro,
+    .bestSellerIntro2 {
+        width: 400px;
+    }
+
+    .bestSellerIntro p,
+    .bestSellerIntro2 p {
+        font-size: 0.7rem;
+    }
+
+    .bestSellerContainer {
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .bestSellerContainer {
+        flex-direction: column;
+    }
+
+    .bestSellerImg img {
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .bestSellerImg {
+        width: 100%;
+    }
+
+    .bestSellerIntro,
+    .bestSellerIntro2 {
+        align-items: center;
+    }
+
+    .bestSellerIntro p,
+    .bestSellerIntro2 p {
+        width: 60%;
+    }
+}
+
+.bestSellerContainer:nth-child(1)>.bestSellerImg>img {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.bestSellerContainer:nth-child(2)>.bestSellerImg>img {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.bestSellerButton {
+    height: 48px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.bestSellerButton:hover {
+    background: #0e0e16;
+    border: 3px solid #2f99d9;
+    color: #2f99d9;
+}
+
+main {
+    min-height: 415px;
+}
+
+/* headphonesSection */
+
+
+.headphonesSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.headphonesSection h1 {
+    text-transform: capitalize;
+    color: #bbbbbb;
+    margin-top: 25px;
+}
+
+.productsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #383c4e;
+    border-radius: 10px;
+    margin: 20px;
+    min-height: 500px;
+    text-align: center;
+}
+
+.product:hover {
+    border: 3px solid #2f99d9;
+}
+
+.productNameContainer {
+    height: 100px;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    padding: 20px;
+    height: 100px;
+    margin-bottom: 0px;
+    color: #bbbbbb;
+}
+
+.productImgContainer {
+    width: 100%;
+    background-color: white;
+    margin: 20px 0px 20px 0px;
+}
+
+@media (max-width:1200px) {
+
+    .product {
+        width: 25%;
+    }
+
+    .productNameContainer {
+        height: 150px;
+    }
+
+}
+
+@media (max-width:1200px) {
+
+    .product {
+        width: 25%;
+    }
+
+    .productNameContainer {
+        height: 150px;
+    }
+
+}
+
+@media (max-width:800px) {
+
+    .product {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .product {
+        width: 70%;
+    }
+}
+
+.product img {
+    max-width: 90%;
+    height: 250px;
+}
+
+.productInfoContainer {
+    /* height: 150px; */
+    color: #bbbbbb;
+}
+
+.product p {
+    padding: 0px 20px 0px 20px;
+}
+
+
+
+
+.headphonesDetailsButton,
+.addToCartButton {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0px 20px 0px;
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    height: 50px;
+    cursor: pointer;
+    color: #0e0e16;
+    border-radius: 10px;
+}
+
+.headphonesDetailsButton:hover,
+.addToCartButton:hover {
+    border: 3px solid #2f99d9;
+    background-color: #0e0e16;
+    color: #2f99d9;
+}
+
+/* Footer */
+
+.footerContainer {
+    /* max-width: 1170px; */
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    background-color: black;
+    padding: 70px 0;
+    margin-top: 40px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #2f99d9;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.social-links {
+    margin: 0px auto 0px auto;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+/*responsive footer*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Modal */
+
+#shadow {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#shadow>img {
+    height: 70%;
+}
+
+#shadow>a {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 1em;
+    right: 1em;
+    border-radius: 2.5em;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2f99d9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#shadow>a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
+}
+
+#shadow>p,
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#shadow>p {
+    text-align: center;
+}
+
+.modalContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 10%;
+}
+
+.imgModalContainer {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: auto;
+    height: 570px;
+}
+
+.imgModalWrapper {
+    width: 80%;
+    height: 80px;
+    background-color: white;
+    margin: 0px 40px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imgModalContainer img {
+    max-width: 80px;
+    margin: 0px 40px 40px 40px;
+    max-height: 80px;
+    background-color: white;
+    margin: auto;
+}
+
+.modalSlider {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.modalBigImgWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modalSlider img {
+    max-width: 90%;
+    max-height: 570px;
+}
+
+.modalNextButton,
+.modalPrevButton {
+    background-color: white;
+    border: 0px;
+}
+
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-items: flex-start;
+    padding: 0px 0px 0px 50px;
+    /* margin: 4% 0px 0px 0px; */
+}
+
+.modalInfo h2,
+.modalInfo p {
+    color: white;
+}
+
+.cartTableContainer {
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    right: 5px;
+}
+
+.cartTableContainer table {
+    width: 500px;
+    text-align: center;
+}
+
+.cartTableContainer table th,
+.cartTableContainer table td {
+    padding: 5px;
+}
+
+.cartTableContainer .goToCart {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 10px 20px 10px;
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    height: 50px;
+    cursor: pointer;
+    color: #0e0e16;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.cartTableContainer .goToCart:hover {
+    background: #0e0e16;
+    color: #2f99d9;
+}
+
+
+@media(max-width: 790px) {
+    .modalContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 40px 10px 40px;
+        color: white;
+    }
+
+    .modalContainer > p:first-of-type {
+        padding: 0px 60px 0px 60px;
+    }
+
+    .modalSlider {
+        margin: 30px;
+    }
+
+
+}
+

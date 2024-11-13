@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/pixelPalace.ico" type="image/x-icon">
+
+    <!-- For the carousel to work -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Social icons in the footer and slider arrows -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    
+    <!-- cart icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/purchases.css">
+
+    <title>Pixel Palace</title>
+</head>
+
+<body>
+
+    <!-- for use with <use>  => (Menu arrow) -->
+    <svg id="arrowsvg" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="arrow" viewbox="0 0 16 16">
+            <polyline points="4 6, 8 10, 12 6" stroke="#FFF" stroke-width="2" fill="transparent"
+                stroke-linecap="round" />
+        </symbol>
+    </svg>
+
+    <header>
+        <nav id="site-navigation" class="site-navigation" aria-label="Clickable Menu Demonstration">
+
+            <div class="logoContainer">
+                <img class="logo" src="assets/images/logo.png" alt="Logo Pixel Palace">
+                <a href="#">
+
+                    <!-- Logo gradient -->
+                    <svg class="gradientText" width="250" height="50" xmlns="http://www.w3.org/2000/svg">
+
+                        <defs>
+
+                            <linearGradient id="gradiente" x1="0" y1="50%" x2="0" y2="100%">
+                                <stop offset="0%" stop-color="#2f99d9" />
+                                <stop offset="100%" stop-color="#3464b4" />
+                            </linearGradient>
+
+                        </defs>
+
+                        <text x="0" y="40" fill="url(#gradiente)" class="gradientText">Pixel Palace</text>
+
+                    </svg>
+
+                </a>
+            </div>
+
+            <div class="menuContainer">
+
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <ul id="main-menu" class="main-menu clicky-menu no-js">
+                    <li class="home">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="productsMenu">
+                        <a href="#">
+                            Products
+                            <svg aria-hidden="true" width="16" height="16">
+                                <use xlink:href="#arrow" />
+                            </svg>
+                        </a>
+                        <ul>
+                            <li class="headphones"><a href="#">Headphones</a></li>
+                            <li class="keyboards"><a href="#">Keyboards</a></li>
+                            <li class="microphones"><a href="#">Microphones</a></li>
+                            <li class="mice"><a href="#">Mice</a></li>
+                            <li class="speakers"><a href="#">Speakers</a></li>
+                        </ul>
+                    </li>
+                    <li class="cartStatus">
+                        <a href="#">
+                            <span class="material-icons icon">shopping_cart</span>
+                            <span class="cartQuantity">0</span>
+                        </a>
+                    </li>
+                    <li class="purchases">
+                        <a href="#">Purchases</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel -->
+
+        <section id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <div class="carouselContent">
+
+                        <div class="imgContainer">
+                            <img class="d-block"
+                                src="assets/images/headphones/logitech/logitechG435HeadphonesWhite.webp"
+                                alt="Logitech G435 White Headphones">
+                        </div>
+
+
+                        <div class="carouselText">
+                            <h5>Our Headphones!</h5>
+                            <p>Play games and music with featherlight comfort and powerful and clean sound. Dual
+                                beamforming
+                                mics reduce background noise. Connect to your devices via wireless and Bluetooth.</p>
+                            <button class="carouselButton headphones">More Headphones!</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="carouselContent">
+
+                        <div class="imgContainer">
+
+                            <img class="d-block" src="assets/images/keyboards/logitech/logitechG715AuroraWireless.webp"
+                                alt="Logitech G715 Aurora Wireless Keyboard">
+
+                        </div>
+
+                        <div class="carouselText">
+                            <h5>Our Keyboards!</h5>
+                            <p>From The Aurora Collection, the G715 is a LIGHTSPEED wireless and Bluetooth gaming
+                                keyboard
+                                designed for comfort with the included soft palm rest. Fully equipped with RGB lighting
+                                and
+                                the
+                                GX mechanical switches of your choice.</p>
+                            <button class="carouselButton keyboards">More Keyboards!</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="carouselContent">
+
+                        <div class="imgContainer">
+
+                            <img class="d-block"
+                                src="assets/images/microphones/hyperx/hyperxDuocastGamingMicrophone.webp"
+                                alt="Hyperx Duocast Gaming Microphone">
+
+                        </div>
+
+                        <div class="carouselText">
+                            <h5>Our Microphones!</h5>
+                            <p>Featuring an elegant design, a low-profile shock mount, and a tasteful RGB light ring,
+                                the
+                                HyperX
+                                DuoCast is a full-featured USB microphone that’s built for gaming, working, and content
+                                creation.
+                            </p>
+                            <button class="carouselButton microphones">More Microphones!</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="carouselContent">
+
+                        <div class="imgContainer">
+
+                            <img class="d-block" src="assets/images/mice/logitech/logitechG203White.webp"
+                                alt="Logitech G203 White Mouse">
+
+                        </div>
+
+
+                        <div class="carouselText">
+                            <h5>Our Mice!</h5>
+                            <p>Make the most of your gaming time with the G203, a gaming mouse available in a variety of
+                                vibrant
+                                colors. With LIGHTSYNC technology, a gaming sensor and a classic 6-button layout, you'll
+                                liven
+                                up your action and your space.
+                            </p>
+                            <button class="carouselButton mice">More Mice!</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="carouselContent">
+
+                        <div class="imgContainer">
+
+                            <img class="d-block"
+                                src="assets/images/speakers/logitech/logitechG560LightsyncSpeakers.webp"
+                                alt="Logitech G560 Lightsync Speakers">
+
+                        </div>
+
+                        <div class="carouselText">
+                            <h5>Our Speakers!</h5>
+                            <p>2.1 speaker system with full-spectrum LIGHTSYNC RGB that reacts to the action and audio
+                                of
+                                the
+                                game in progress. DTS:X Ultra positional surround sound powers the explosive
+                                bottom-firing
+                                subwoofer and two satellite speakers with wide-angle drivers.</p>
+                            <button class="carouselButton speakers">More Speakers!</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden ">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+
+        </section>
+
+        <section class="bestSellerSection">
+
+            <div class="bestSellerContainer">
+
+                <div class="bestSellerIntro">
+
+                    <p>PC gaming speaker</p>
+                    <h2>Logitech G560</h2>
+                    <p>Hear every detail just as the game and sound designers of this 2.1 speaker system imagined.</p>
+                    <button class="bestSellerButton">Learn More!</button>
+
+                </div>
+
+                <div class="bestSellerImg">
+
+                    <img src="assets/images/g560Speakers.jpg" alt="Logitech G560 Lightsync Speakers">
+
+                </div>
+
+            </div>
+
+            <div class="bestSellerContainer">
+
+                <div class="bestSellerImg">
+
+                    <img src="assets/images/hyperxQuadcastMic.webp" alt="HyperX QuadCast Microphone">
+
+                </div>
+
+                <div class="bestSellerIntro2">
+
+                    <p>Professional-grade condenser mic.</p>
+                    <h2>HyperX QuadCast</h2>
+                    <p>The HyperX QuadCast is the ideal all-inclusive standalone microphone for the aspiring streamer or
+                        podcaster looking for a condenser mic with quality sound.</p>
+                    <button class="bestSellerButton">Learn More!</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>values</h4>
+                    <ul>
+                        <li><a href="#">social impact</a></li>
+                        <li><a href="#">sustainability</a></li>
+                        <li><a href="#">recycling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-social">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/slider.js"></script>
+
+</body>
+
+</html>

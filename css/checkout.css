@@ -1,0 +1,45 @@
+.checkoutResponseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 350px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.messageContainer img {
+    width: 60%;
+    margin: 0px 0px 20px 0px;
+}
+
+.successMessage {
+    color: black;
+    padding: 10px;
+}
+
+.successButtonsContainer button {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 10px 20px 10px;
+    background: #2f99d9;
+    border: 3px solid #2f99d9;
+    height: 50px;
+    cursor: pointer;
+    color: #0e0e16;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+}
